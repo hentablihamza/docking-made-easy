@@ -1,0 +1,60 @@
+cff-version: 1.2.0
+title: docking-made-easy
+message: If you use this software, please cite it using the metadata below.
+type: software
+authors:
+  - family-names: Hentabli
+    given-names: Hamza
+    orcid: https://orcid.org/0000-0002-9530-2815
+repository-code: https://github.com/hentablihamza/docking-made-easy
+url: https://github.com/hentablihamza/docking-made-easy
+abstract: >
+  A reproducible AutoDock Vina workflow: receptor preparation from a crystal
+  structure (ligand, water and buffer removal, missing-atom rebuilding,
+  protonation, AutoDock typing), a docking box computed automatically from the
+  co-crystal ligand, ligand preparation from SMILES or SDF, single and batch
+  docking with configurable exhaustiveness and seed, parsing of Vina output
+  into tidy tables and SDF/PDB poses, and a symmetry-corrected redocking check
+  against the crystal pose.
+keywords:
+  - molecular docking
+  - AutoDock Vina
+  - structure-based drug design
+  - virtual screening
+  - cheminformatics
+  - RDKit
+version: 0.1.0
+date-released: "2026-11-24"
+references:
+  - type: article
+    title: "AutoDock Vina 1.2.0: New Docking Methods, Expanded Force Field, and Python Bindings"
+    authors:
+      - family-names: Eberhardt
+        given-names: Jerome
+      - family-names: Santos-Martins
+        given-names: Diogo
+      - family-names: Tillack
+        given-names: Andreas F.
+      - family-names: Forli
+        given-names: Stefano
+    journal: Journal of Chemical Information and Modeling
+    year: 2021
+    volume: 61
+    issue: 8
+    start: 3891
+    end: 3898
+    doi: 10.1021/acs.jcim.1c00203
+  - type: article
+    title: "AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading"
+    authors:
+      - family-names: Trott
+        given-names: Oleg
+      - family-names: Olson
+        given-names: Arthur J.
+    journal: Journal of Computational Chemistry
+    year: 2010
+    volume: 31
+    issue: 2
+    start: 455
+    end: 461
+    doi: 10.1002/jcc.21334

@@ -1,0 +1,79 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "docking-made-easy"
+version = "0.1.0"
+description = "AutoDock Vina docking made reproducible: protein preparation, a docking box taken from the co-crystal ligand, batch docking, tidy result tables and a redocking sanity check"
+readme = "README.md"
+authors = [
+    { name = "Hamza Hentabli" },
+]
+requires-python = ">=3.10"
+keywords = [
+    "autodock-vina",
+    "molecular-docking",
+    "drug-discovery",
+    "cheminformatics",
+    "virtual-screening",
+    "rdkit",
+    "structure-based-drug-design",
+    "computational-chemistry",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Education",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+    "numpy>=1.24",
+    "pandas>=2.0",
+    "rdkit>=2023.9.1",
+]
+
+[project.optional-dependencies]
+# Ligand preparation and pose-to-SDF conversion.
+prep = [
+    "meeko>=0.6",
+]
+dev = [
+    "pytest>=7.0",
+    "meeko>=0.6",
+]
+
+[project.urls]
+Homepage = "https://github.com/hentablihamza/docking-made-easy"
+Repository = "https://github.com/hentablihamza/docking-made-easy"
+Issues = "https://github.com/hentablihamza/docking-made-easy/issues"
+
+[project.scripts]
+dme = "docking_made_easy.cli:main"
+docking-made-easy = "docking_made_easy.cli:main"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "src/docking_made_easy",
+    "tests",
+    "examples",
+    "docs",
+    "README.md",
+    "CITATION.cff",
+    "environment.yml",
+    "pyproject.toml",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+    "vina: needs the AutoDock Vina binary (skipped when it is not installed)",
+    "network: downloads a structure from the RCSB PDB",
+]

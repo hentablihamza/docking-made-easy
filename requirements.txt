@@ -1,0 +1,10 @@
+# Core: box calculation, result parsing, ligand preparation, tables.
+numpy>=1.24
+pandas>=2.0
+rdkit>=2023.9.1
+meeko>=0.6
+
+# Docking itself needs the AutoDock Vina binary, and receptor preparation needs
+# PDBFixer. Both are easiest from conda-forge:
+#   conda install -c conda-forge vina pdbfixer openmm openbabel
+# See environment.yml for the full environment.

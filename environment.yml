@@ -1,0 +1,18 @@
+name: docking-made-easy
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - numpy>=1.24
+  - pandas>=2.0
+  - rdkit>=2023.09
+  - vina>=1.2.5          # AutoDock Vina binary + Python bindings
+  - openbabel>=3.1       # fallback receptor conversion
+  - pdbfixer>=1.9        # missing atoms and hydrogens
+  - openmm>=8.0          # pdbfixer dependency
+  - matplotlib>=3.7      # example figures
+  - pytest>=7.0
+  - pip
+  - pip:
+      - meeko>=0.6       # AutoDock typing for ligands and receptors
+      - -e .
