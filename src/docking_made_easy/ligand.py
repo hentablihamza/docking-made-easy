@@ -283,6 +283,12 @@ def ligand_from_pdb_block(block: str, template_smiles: str | None = None, name: 
         raise LigandError("RDKit could not read the crystal ligand PDB block.")
     if template_smiles:
         template = mol_from_smiles(template_smiles, name=name)
+        if template.GetNumAtoms() != mol.GetNumAtoms():
+            raise LigandError(
+                "The template SMILES does not match the crystal ligand: "
+                f"{mol.GetNumAtoms()} heavy atoms in the PDB block vs "
+                f"{template.GetNumAtoms()} in the template."
+            )
         try:
             mol = AllChem.AssignBondOrdersFromTemplate(template, mol)
         except Exception as exc:

@@ -10,6 +10,8 @@ dependencies:
   - openbabel>=3.1       # fallback receptor conversion
   - pdbfixer>=1.9        # missing atoms and hydrogens
   - openmm>=8.0          # pdbfixer dependency
+  - scipy>=1.10          # Meeko dependency
+  - gemmi>=0.6           # Meeko dependency
   - matplotlib>=3.7      # example figures
   - pytest>=7.0
   - pip

@@ -1,0 +1,212 @@
+{
+  "pdb_id": "1M17",
+  "exhaustiveness": 16,
+  "seed": 42,
+  "structure": {
+    "pdb_id": "1M17",
+    "n_atoms": 2546,
+    "chains": [
+      "A"
+    ],
+    "n_polymer_residues": 312,
+    "n_waters": 20,
+    "ions": [],
+    "ligands": [
+      {
+        "key": "AQ4:A:999",
+        "res_name": "AQ4",
+        "n_heavy_atoms": 29
+      }
+    ]
+  },
+  "box": {
+    "center_x": 21.697499999999998,
+    "center_y": 0.30299999999999994,
+    "center_z": 52.0925,
+    "size_x": 24.0,
+    "size_y": 12.75,
+    "size_z": 15.375,
+    "source": "ligand:AQ4:A:999"
+  },
+  "box_check": {
+    "ligand": "AQ4:A:999",
+    "ligand_atoms_inside": 1.0,
+    "ligand_extent": [
+      15.709,
+      4.684,
+      7.099000000000004
+    ],
+    "box_volume": 4704.75,
+    "warnings": [],
+    "receptor_heavy_atoms_in_box": 148,
+    "receptor_atom_density": 31.457569477655557
+  },
+  "pocket_residues": [
+    {
+      "residue": "MET769:A",
+      "distance": 2.7
+    },
+    {
+      "residue": "ASP831:A",
+      "distance": 3.11
+    },
+    {
+      "residue": "PRO770:A",
+      "distance": 3.11
+    },
+    {
+      "residue": "GLN767:A",
+      "distance": 3.15
+    },
+    {
+      "residue": "GLY772:A",
+      "distance": 3.24
+    },
+    {
+      "residue": "LEU694:A",
+      "distance": 3.27
+    },
+    {
+      "residue": "ALA719:A",
+      "distance": 3.31
+    },
+    {
+      "residue": "THR766:A",
+      "distance": 3.41
+    },
+    {
+      "residue": "LEU764:A",
+      "distance": 3.43
+    },
+    {
+      "residue": "PHE771:A",
+      "distance": 3.45
+    },
+    {
+      "residue": "LEU820:A",
+      "distance": 3.45
+    },
+    {
+      "residue": "LEU768:A",
+      "distance": 3.5
+    },
+    {
+      "residue": "THR830:A",
+      "distance": 3.65
+    },
+    {
+      "residue": "LYS721:A",
+      "distance": 3.7
+    },
+    {
+      "residue": "GLU738:A",
+      "distance": 3.81
+    },
+    {
+      "residue": "VAL702:A",
+      "distance": 4.19
+    },
+    {
+      "residue": "ILE765:A",
+      "distance": 4.45
+    },
+    {
+      "residue": "GLY695:A",
+      "distance": 4.5
+    },
+    {
+      "residue": "MET742:A",
+      "distance": 4.63
+    },
+    {
+      "residue": "CYS773:A",
+      "distance": 4.73
+    }
+  ],
+  "receptor": {
+    "method": "meeko",
+    "ph": 7.4,
+    "atoms": 3031,
+    "hydrogens": 534,
+    "notes": [
+      "1 terminal OXT/HXT atom(s) removed for Meeko compatibility (pass --keep-oxt to keep them)."
+    ]
+  },
+  "redock": {
+    "top_pose_rmsd": 1.15,
+    "best_rmsd": 1.15,
+    "top_affinity": -7.186,
+    "success": true,
+    "rmsd_per_mode": [
+      1.15,
+      1.204,
+      4.63,
+      8.479,
+      8.165,
+      8.582,
+      7.904,
+      3.02,
+      7.882
+    ],
+    "seconds": 13.5
+  },
+  "screen": [
+    {
+      "ligand": "imatinib",
+      "best_affinity": -9.138,
+      "mean_affinity": -8.6916666667,
+      "worst_affinity": -8.39,
+      "n_modes": 9
+    },
+    {
+      "ligand": "lapatinib",
+      "best_affinity": -9.114,
+      "mean_affinity": -8.655,
+      "worst_affinity": -8.393,
+      "n_modes": 9
+    },
+    {
+      "ligand": "gefitinib",
+      "best_affinity": -8.167,
+      "mean_affinity": -7.4962222222,
+      "worst_affinity": -7.084,
+      "n_modes": 9
+    },
+    {
+      "ligand": "afatinib",
+      "best_affinity": -8.152,
+      "mean_affinity": -7.7884444444,
+      "worst_affinity": -7.353,
+      "n_modes": 9
+    },
+    {
+      "ligand": "vandetanib",
+      "best_affinity": -8.012,
+      "mean_affinity": -7.7167777778,
+      "worst_affinity": -7.395,
+      "n_modes": 9
+    },
+    {
+      "ligand": "erlotinib",
+      "best_affinity": -7.186,
+      "mean_affinity": -6.9688888889,
+      "worst_affinity": -6.751,
+      "n_modes": 9
+    },
+    {
+      "ligand": "aspirin",
+      "best_affinity": -5.879,
+      "mean_affinity": -5.5395555556,
+      "worst_affinity": -5.287,
+      "n_modes": 9
+    },
+    {
+      "ligand": "glucose",
+      "best_affinity": -5.82,
+      "mean_affinity": -5.0933333333,
+      "worst_affinity": -4.668,
+      "n_modes": 9
+    }
+  ],
+  "seconds_total": 137.1
+}

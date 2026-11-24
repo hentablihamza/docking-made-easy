@@ -3,6 +3,8 @@ numpy>=1.24
 pandas>=2.0
 rdkit>=2023.9.1
 meeko>=0.6
+scipy>=1.10   # imported by Meeko
+gemmi>=0.6    # imported by Meeko
 
 # Docking itself needs the AutoDock Vina binary, and receptor preparation needs
 # PDBFixer. Both are easiest from conda-forge:

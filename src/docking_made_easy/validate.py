@@ -95,9 +95,19 @@ def pose_rmsd(probe_mol, reference_mol, conf_id: int = 0, symmetry: bool = True)
         )
     if symmetry:
         return float(rdMolAlign.CalcRMS(probe, reference, prbId=conf_id, refId=0))
+
+    # Without symmetry correction, the atoms are matched once (the first
+    # substructure match) and that single mapping is used. This is what a
+    # naive script does, and it is never better than the symmetry-corrected
+    # value, which is the point of showing both.
     import numpy as np
 
-    a = probe.GetConformer(conf_id).GetPositions()
+    match = probe.GetSubstructMatch(reference)
+    if not match:
+        raise LigandError(
+            "The docked pose and the crystal ligand are not the same molecule."
+        )
+    a = probe.GetConformer(conf_id).GetPositions()[list(match)]
     b = reference.GetConformer(0).GetPositions()
     return float(np.sqrt(((a - b) ** 2).sum(axis=1).mean()))
 

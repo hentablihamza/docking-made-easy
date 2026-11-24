@@ -43,10 +43,14 @@ dependencies = [
 # Ligand preparation and pose-to-SDF conversion.
 prep = [
     "meeko>=0.6",
+    "scipy>=1.10",   # imported by Meeko, which does not declare it
+    "gemmi>=0.6",    # same
 ]
 dev = [
     "pytest>=7.0",
     "meeko>=0.6",
+    "scipy>=1.10",
+    "gemmi>=0.6",
 ]
 
 [project.urls]
